@@ -1,7 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Layouts 1.3
 import Lomiri.Components 1.3
-import Lomiri.PushNotifications 0.1
+import Ubuntu.PushNotifications 0.1
 
 MainView {
     id: root
