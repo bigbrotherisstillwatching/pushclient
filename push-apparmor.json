@@ -1,5 +1,5 @@
 {
-    "template": "unconfined",
+    "template": "ubuntu-push-helper",
     "policy_groups": [
         "push-notification-client"
     ],
