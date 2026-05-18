@@ -15,5 +15,5 @@
     },
     "version": "1.0",
     "maintainer": "Christian Pauly <christian-pauly@posteo.de>",
-    "framework" : "ubuntu-sdk-20.04"
+    "framework" : "@CLICK_FRAMEWORK@"
 }
