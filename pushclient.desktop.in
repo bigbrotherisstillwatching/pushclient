@@ -4,4 +4,5 @@ Exec=qmlscene qml/Main.qml
 Icon=assets/logo.svg
 Terminal=false
 Type=Application
-X-Ubuntu-Touch=true
+X-Lomiri-Touch=true
+X-Lomiri-Supported-Orientations=portrait
