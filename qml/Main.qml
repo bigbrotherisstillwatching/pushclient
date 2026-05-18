@@ -1,7 +1,7 @@
-import QtQuick 2.9
-import QtQuick.Layouts 1.1
-import Ubuntu.Components 1.3
-import Ubuntu.PushNotifications 0.1
+import QtQuick 2.15
+import QtQuick.Layouts 1.3
+import Lomiri.Components 1.3
+import Lomiri.PushNotifications 0.1
 
 MainView {
     id: root
@@ -54,7 +54,7 @@ MainView {
         Button {
             id: sendButton
             text: i18n.tr("Send push notification")
-            color: UbuntuColors.green
+            color: LomiriColors.green
             anchors.top: messageInput.bottom
             anchors.left: parent.left
             anchors.right: parent.right
@@ -63,7 +63,7 @@ MainView {
             enabled: pushClient.token && messageInput.displayText !== "" && tokenInput.displayText !== ""
             onClicked: {
                 console.log("💬 Sending push notification ...")
-                sendButton.color = UbuntuColors.green
+                sendButton.color = LomiriColors.green
                 var req = new XMLHttpRequest();
                 req.open("post", "https://push.ubports.com/notify", true);
                 req.setRequestHeader("Content-type", "application/json");
@@ -72,7 +72,7 @@ MainView {
                         console.log("✍ Answer from push service:", req.responseText)
                         var ans = JSON.parse(req.responseText)
                         if ( ans.error ) {
-                            sendButton.color = UbuntuColors.red
+                            sendButton.color = LomiriColors.red
                             messageInput.text = ans.error
                             if ( ans.message ) {
                                 messageInput.text += ": " + ans.message
@@ -112,12 +112,12 @@ MainView {
             anchors.right: parent.right
             anchors.margins: units.gu(1)
             width: parent.width - units.gu(2)
-            color: UbuntuColors.green
+            color: LomiriColors.green
             enabled: pushClient.token
             onClicked: {
                 mimeData.text = pushClient.token
                 Clipboard.push( mimeData )
-                yourTokenDescription.color =  UbuntuColors.slate
+                yourTokenDescription.color =  LomiriColors.slate
             }
         }
 
