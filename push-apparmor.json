@@ -1,5 +1,5 @@
 {
-    "template": "ubuntu-push-helper",
+    "template": "lomiri-push-helper",
     "policy_groups": [
         "push-notification-client"
     ],
